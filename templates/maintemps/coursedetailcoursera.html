@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<center style="margin: 50px; display: block; z-index: 99; padding-bottom: 50px;">
+    <table class="table" >
+        <thead>
+          <h1>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+          </h1>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td><h1>Title:</h1></td>
+            <td><h1>{{ data.title }}</h1></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td><h1>Source:</h1></td>
+            <td><h1>{{ data.web }}</h1></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Link</td>
+            <td><a href="{{data.link}}" class="underline">{{data.link}}</a></td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Section: </td>
+            <td>{{data.section}}</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>Rating</td>
+            <td>{{data.rating}}/5</td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>Rating_count: </td>
+            <td>{{data.rating_count}}</td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>StudentsEnrolled: </td>
+            <td>{{data.enrolnum}}</td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td>Difficulty</td>
+            <td>{{data.difficulty}}</td>
+          </tr>
+          <tr>
+            <th scope="row">9</th>
+            <td>Type: </td>
+            <td>{{data.Type}}</td>
+          </tr>
+        </tbody>
+      </table>
+</center>
+
+{% endblock %}

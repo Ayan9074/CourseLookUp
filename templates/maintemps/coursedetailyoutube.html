@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<center style="margin: 50px; display: block;">
+    <form method="POST" action="#">
+        {% csrf_token %}
+        <div class="col-lg-6 col-md-6 col-12">
+            <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <select class="form-control" name="sortmethod"style="width: 100%">
+                    <option value="0">Sort By:</option>
+                    <option value="alph">Alphabetical</option>
+                    <option value="views">Views</option>
+                </select>
+            </div>
+                <input type="text" name="user" class="form-control" placeholder="Try to enter only one key word such as 'art' or 'python'">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</center>
+<center><a href="{{link}}" class="underline">Link To Playlist: {{link}}</a></center>
+<center>First Three Video's In Youtube Playlist: </center>
+<section class="card1s-wrapper">
+        <div class="card1-grid-space">
+            <a class="card1" href="{{ link }}" style="--bg-img: url({{ img0 }})" style='width: max-content !important;'>
+            <div>
+                <h1>{{ title0 }}</h1>
+                <p>{{ desc0 }}</p>
+                <div class="date">Views: {{ vc0 }}</div>
+                <div class="tags">
+                <div class="tag">{{ rating0 }}/5 stars</div>
+                </div>
+            </div>
+            </a>
+        </div>
+        <div class="card1-grid-space">
+            <a class="card1" href="{{ link }}" style="--bg-img: url({{ img1 }})" style='width: max-content !important;'>
+            <div>
+                <h1>{{ title1 }}</h1>
+                <p>{{ desc1 }}</p>
+                <div class="date">Views: {{ vc1 }}</div>
+                <div class="tags">
+                <div class="tag">{{ rating0 }}/5 stars</div>
+                </div>
+            </div>
+            </a>
+        </div>
+        <div class="card1-grid-space">
+            <a class="card1" href="{{ link }}" style="--bg-img: url({{ img2 }})" style='width: max-content !important;'>
+            <div>
+                <h1>{{ title2 }}</h1>
+                <p>{{ desc2 }}</p>
+                <div class="date">Views: {{ vc2 }}</div>
+                <div class="tags">
+                <div class="tag">{{ rating0 }}/5 stars</div>
+                </div>
+            </div>
+            </a>
+        </div>
+</section>
+{% endblock %}

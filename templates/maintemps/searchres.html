@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<center style="margin: 50px; display: block;">
+    <form method="POST" action="#">
+        {% csrf_token %}
+        <div class="col-lg-6 col-md-6 col-12">
+            <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <select class="form-control" name="sortmethod"style="width: 100%">
+                    <option value="0">Sort By:</option>
+                    <option value="alph">Alphabetical</option>
+                    <option value="views">Views</option>
+                </select>
+            </div>
+                <input type="text" name="user" class="form-control" placeholder="Try to enter only one key word such as 'art' or 'python'">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</center>
+<section class="cards-wrapper">
+    {% for data in data %}
+        <div class="card-grid-space">
+            <a class="card" href="/specific/{{data.id}}" style="--bg-img: url({{ data.img }})" style='width: max-content !important;'>
+            <div>
+                <h1>{{ data.title}}</h1>
+                <p>{{ data.description }}</p>
+                <div class="date">1 March 2019</div>
+                <div class="tags">
+                <div class="tag">{{ data.web }}</div>
+                </div>
+            </div>
+            </a>
+        </div>
+    {% endfor %}
+
+</section>
+{% endblock %}

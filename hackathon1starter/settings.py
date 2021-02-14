@@ -142,5 +142,7 @@ MEDIA_URL = '/media/'
 # Path where media is stored
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
+
 #activate heroku
-django_heroku.settings(locals())
+# uncomment this line for heroku to host on heroku
+#django_heroku.settings(locals())

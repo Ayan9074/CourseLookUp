@@ -1,6 +1,6 @@
 # CourseLookUp
 Open on Heroku:
-[![Deploy](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWT9sjLLQNFDIt65PYAitIP2-xeiBTELkkxg&usqp=CAU)](https://heroku.com/deploy?template=https://github.com/Ayan9074/SocketChatApp)
+[![Open](https://www.herokucdn.com/deploy/button.png)](https://courselookup101.herokuapp.com/)
 
 CourseLookUp is a website which you can use to help with e-education. It can be used to look through different courses to find one on a subject you like.
 The code gets its information from webscraping the internet. For now it only goes through Coursera and youtube, and only 10 categories have been created for the prototype.
